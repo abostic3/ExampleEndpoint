@@ -1,17 +1,16 @@
 package com.luma.boston.service.service.impl;
 
 import com.luma.boston.service.model.RabbitMessage;
-import com.luma.boston.service.model.RequestForQuote;
-import com.luma.boston.service.repository.RfqRepository;
-import com.luma.boston.service.service.RfqService;
+import com.luma.boston.service.repository.RabbitMessageRepository;
+import com.luma.boston.service.service.RabbitMessageService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @AllArgsConstructor
 @Service
-public class RfqServiceImpl implements RfqService {
+public class RabbitMessageServiceImpl implements RabbitMessageService {
 
-  private final RfqRepository repository;
+  private final RabbitMessageRepository repository;
 
   @Override
   public RabbitMessage save(Object requestForQuote) {

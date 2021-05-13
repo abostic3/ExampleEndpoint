@@ -1,7 +1,7 @@
 package com.luma.boston.service.controller;
 
 import com.luma.boston.service.model.RabbitMessage;
-import com.luma.boston.service.service.RfqService;
+import com.luma.boston.service.service.RabbitMessageService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class RfqController {
 
-  private final RfqService service;
+  private final RabbitMessageService service;
 
   @PostMapping("/rfq")
   @PreAuthorize("#oauth2.hasScope('serverclient') or hasAuthority('Administrator')")
