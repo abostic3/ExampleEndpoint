@@ -1,6 +1,7 @@
 package com.luma.boston.service.config;
 
 import com.luma.security.config.EnableApplicationSecurity;
+import com.luma.security.feign.EnableFeignSecuritySupport;
 import com.luma.security.server.EnableDefaultResourceServer;
 import com.luma.spring.swagger.EnableApplicationSwagger;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -13,7 +14,8 @@ import org.springframework.security.oauth2.client.token.grant.client.ClientCrede
 @EnableApplicationSecurity
 @EnableDefaultResourceServer
 @EnableApplicationSwagger
-public class LumaServiceConfig {
+@EnableFeignSecuritySupport
+public class PricingAPITestingServiceConfig {
     @Bean
     @ConditionalOnMissingBean
     @ConfigurationProperties("security.oauth2.interservice")

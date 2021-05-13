@@ -1,6 +1,6 @@
 spring:
   application:
-    name: luma-service
+    name: pricing-api-testing-service
   profiles:
     include:
       - ${KUBERNETES_NAMESPACE:local}
@@ -36,4 +36,4 @@ ribbon:
     enabled: false
 
 server:
-  port: 8080
+  port: 8998
